@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|solutionrelative:newsapplication\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2131100-EEE3-48FA-90FC-2BB36E21781B}|NewsApplication\\NewsApplication.csproj|d:\\code related\\newsappapi\\educational-practice\\newsapplication\\newsapplication\\newsapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -48,59 +48,59 @@
               "RelativeDocumentMoniker": "NewsApplication\\Models\\Role.cs",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\Role.cs",
               "RelativeToolTip": "NewsApplication\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T11:27:59.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\User.cs",
               "RelativeDocumentMoniker": "NewsApplication\\Models\\User.cs",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\User.cs",
               "RelativeToolTip": "NewsApplication\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T11:27:37.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Article.cs",
               "DocumentMoniker": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\Article.cs",
               "RelativeDocumentMoniker": "NewsApplication\\Models\\Article.cs",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\Article.cs",
               "RelativeToolTip": "NewsApplication\\Models\\Article.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T11:27:07.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\Category.cs",
               "RelativeDocumentMoniker": "NewsApplication\\Models\\Category.cs",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Models\\Category.cs",
               "RelativeToolTip": "NewsApplication\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T11:26:39.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "NewsApplication\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\Data\\AppDbContext.cs",
               "RelativeToolTip": "NewsApplication\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T11:25:48.244Z",
               "EditorCaption": ""
@@ -108,15 +108,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "NewsApplication",
+              "Title": "NewsApplication.csproj",
               "DocumentMoniker": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\NewsApplication.csproj",
               "RelativeDocumentMoniker": "NewsApplication\\NewsApplication.csproj",
               "ToolTip": "D:\\Code related\\NewsAppAPI\\Educational-Practice\\NewsApplication\\NewsApplication\\NewsApplication.csproj",
               "RelativeToolTip": "NewsApplication\\NewsApplication.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-15T11:24:29.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T11:24:29.846Z"
             },
             {
               "$type": "Document",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "NewsApplication\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-15T11:11:14.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T11:11:14.969Z"
             }
           ]
         }
