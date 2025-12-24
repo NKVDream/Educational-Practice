@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "article",
-        "Type": "NewsApp.Models.Article",
+        "Name": "articleDto",
+        "Type": "NewsApp.DTOs.ArticleDto",
         "IsRequired": true
       }
     ],
@@ -85,8 +85,8 @@
         "IsRequired": true
       },
       {
-        "Name": "article",
-        "Type": "NewsApp.Models.Article",
+        "Name": "articleDto",
+        "Type": "NewsApp.DTOs.ArticleDto",
         "IsRequired": true
       }
     ],

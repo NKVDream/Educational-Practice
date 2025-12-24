@@ -1,5 +1,6 @@
 wwwroot\css\login.css
 wwwroot\css\styles.css
+wwwroot\images\usa.webp
 wwwroot\index.html
 wwwroot\js\app.js
 wwwroot\js\login.js
