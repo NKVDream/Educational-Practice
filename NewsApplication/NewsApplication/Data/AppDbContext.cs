@@ -1,5 +1,4 @@
-﻿// Data/AppDbContext.cs
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NewsApp.Models;
 
 namespace NewsApp.Data
@@ -11,52 +10,71 @@ namespace NewsApp.Data
         {
         }
 
-        // Таблицы
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Article> Articles { get; set; }
+        public DbSet<Article> articles { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Role> roles { get; set; }
+        public DbSet<Category> categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            // Настройка таблицы Users
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.HasIndex(u => u.Username).IsUnique();
-                entity.HasIndex(u => u.Email).IsUnique();
-
-                entity.HasOne(u => u.UserRole)
-                      .WithMany(r => r.Users)
-                      .HasForeignKey(u => u.UserRoleId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            // Настройка таблицы Articles
+            // Указываем точные имена таблиц и столбцов
             modelBuilder.Entity<Article>(entity =>
             {
-                entity.HasOne(a => a.Category)
-                      .WithMany(c => c.Articles)
-                      .HasForeignKey(a => a.CategoryId)
-                      .OnDelete(DeleteBehavior.Restrict);
+                entity.ToTable("articles");
+                entity.HasKey(e => e.id);
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.title).HasColumnName("title");
+                entity.Property(e => e.content).HasColumnName("content");
+                entity.Property(e => e.excerpt).HasColumnName("excerpt");
+                entity.Property(e => e.cover_image_url).HasColumnName("cover_image_url");
+                entity.Property(e => e.published).HasColumnName("published");
+                entity.Property(e => e.category_id).HasColumnName("category_id");
+                entity.Property(e => e.author_id).HasColumnName("author_id");
 
-                entity.HasOne(a => a.Author)
-                      .WithMany(u => u.Articles)
-                      .HasForeignKey(a => a.AuthorId)
-                      .OnDelete(DeleteBehavior.Restrict);
+                // Внешние ключи как в таблице
+                entity.HasOne(a => a.category)
+                    .WithMany()
+                    .HasForeignKey(a => a.category_id)
+                    .HasConstraintName("articles_category_id_fkey");
+
+                entity.HasOne(a => a.author)
+                    .WithMany()
+                    .HasForeignKey(a => a.author_id)
+                    .HasConstraintName("articles_author_id_fkey");
             });
 
-            // Настройка таблицы Roles
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.ToTable("users");
+                entity.HasKey(e => e.id);
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.username).HasColumnName("username");
+                entity.Property(e => e.email).HasColumnName("email");
+                entity.Property(e => e.password_hash).HasColumnName("password_hash"); // ← ДОБАВЛЕНО
+                entity.Property(e => e.user_role).HasColumnName("user_role");
+
+                entity.HasOne(u => u.role)
+                    .WithMany()
+                    .HasForeignKey(u => u.user_role)
+                    .HasConstraintName("users_user_role_fkey");
+            });
+
             modelBuilder.Entity<Role>(entity =>
             {
-                entity.HasIndex(r => r.Name).IsUnique();
+                entity.ToTable("roles");
+                entity.HasKey(e => e.id);
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.name).HasColumnName("name");
+                entity.Property(e => e.description).HasColumnName("description");
             });
 
-            // Настройка таблицы Categories
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasIndex(c => c.Name).IsUnique();
+                entity.ToTable("categories");
+                entity.HasKey(e => e.id);
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.name).HasColumnName("name");
+                entity.Property(e => e.description).HasColumnName("description");
             });
         }
     }

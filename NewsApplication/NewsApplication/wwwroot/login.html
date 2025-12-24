@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в новостное приложение</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Вход в систему</h2>
+        <div class="form-group">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" placeholder="Введите имя пользователя">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" placeholder="Введите пароль">
+        </div>
+
+        <button onclick="LoginHandler()">Войти</button>
+
+        <div id="errorMessage" class="error"></div>
+
+        <div style="margin-top: 20px; font-size: 12px; color: #777;">
+            <p>Доступные пользователи:</p>
+            <ul>
+                <li>Nick / Nick123 (Автор)</li>
+                <li>Joe / Joe123 (Читатель)</li>
+                <li>Editor / Editor123 (Админ)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function LoginHandler() {
+            try {
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                const errorElement = document.getElementById("errorMessage");
+
+                // Используем твоих пользователей из БД
+                if (username === "Nick" && password === "Nick123") {
+                    localStorage.setItem("canView", "true");
+                    localStorage.setItem("canEdit", "true");  // Author может редактировать
+                    localStorage.setItem("canDelete", "false");
+                    localStorage.setItem("username", "Nick");
+                    localStorage.setItem("userRole", "Author");
+                    window.location.href = "index.html";
+                }
+                else if (username === "Joe" && password === "Joe123") {
+                    localStorage.setItem("canView", "true");
+                    localStorage.setItem("canEdit", "false");  // Reader только читает
+                    localStorage.setItem("canDelete", "false");
+                    localStorage.setItem("username", "Joe");
+                    localStorage.setItem("userRole", "Reader");
+                    window.location.href = "index.html";
+                }
+                else if (username === "Editor" && password === "Editor123") {
+                    localStorage.setItem("canView", "true");
+                    localStorage.setItem("canEdit", "true");  // Admin может всё
+                    localStorage.setItem("canDelete", "true");
+                    localStorage.setItem("username", "Editor");
+                    localStorage.setItem("userRole", "Admin");
+                    window.location.href = "index.html";
+                }
+                else {
+                    errorElement.textContent = "Неверные учетные данные";
+                }
+            } catch (error) {
+                console.error("Ошибка:", error);
+                document.getElementById("errorMessage").textContent = "Произошла ошибка при входе";
+            }
+        }
+
+        // Добавляем обработчик нажатия Enter
+        document.getElementById("password").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                LoginHandler();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,39 +1,25 @@
-﻿// Models/User.cs
-//using NewsApplication.Models;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace NewsApp.Models
 {
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string Username { get; set; } = string.Empty;
+        public string username { get; set; }
 
         [Required]
-        [EmailAddress]
         [MaxLength(100)]
-        public string Email { get; set; } = string.Empty;
+        public string email { get; set; }
 
         [Required]
         [MaxLength(255)]
-        public string PasswordHash { get; set; } = string.Empty;
+        public string password_hash { get; set; } // ← ДОБАВЛЕНО
 
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime? LastLogin { get; set; }
+        public int user_role { get; set; }
 
-        // Внешний ключ на роль
-        public int UserRoleId { get; set; }
-
-        // Навигационные свойства
-        [ForeignKey("UserRoleId")]
-        public Role? UserRole { get; set; }
-
-        public ICollection<Article> Articles { get; set; } = new List<Article>();
+        public Role role { get; set; }
     }
 }

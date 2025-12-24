@@ -6,35 +6,28 @@ namespace NewsApp.Models
 {
     public class Article
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int id { get; set; }  // точно как в таблице
 
         [Required]
         [MaxLength(200)]
-        public string Title { get; set; } = string.Empty;
+        public string title { get; set; }
 
         [Required]
-        [Column(TypeName = "text")]
-        public string Content { get; set; } = string.Empty;
+        public string content { get; set; }
 
-        [Column(TypeName = "text")]
-        public string? Excerpt { get; set; }
+        public string excerpt { get; set; }
 
         [MaxLength(500)]
-        public string? CoverImageUrl { get; set; }
+        public string cover_image_url { get; set; }
 
-        public DateTime Published { get; set; } = DateTime.Now;
+        public DateTime published { get; set; } = DateTime.UtcNow;
 
-        // Внешние ключи
-        public int CategoryId { get; set; }
-        public int AuthorId { get; set; }
+        public int category_id { get; set; }  // точно как внешний ключ
+
+        public int author_id { get; set; }    // точно как внешний ключ
 
         // Навигационные свойства
-        [ForeignKey("CategoryId")]
-        public Category? Category { get; set; }
-
-        [ForeignKey("AuthorId")]
-        public User? Author { get; set; }
+        public Category category { get; set; }
+        public User author { get; set; }
     }
 }
