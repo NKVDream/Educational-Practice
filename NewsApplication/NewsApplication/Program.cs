@@ -48,7 +48,7 @@ app.UseRouting();
 app.UseCors("AllowFrontend");
 app.UseSession();
 app.UseAuthorization();
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();

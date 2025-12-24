@@ -1,0 +1,123 @@
+﻿/* wwwroot/css/login.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+    input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+    }
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    button:active {
+        transform: translateY(1px);
+    }
+
+.error {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.loading {
+    text-align: center;
+    margin: 10px 0;
+    color: #666;
+    display: none;
+}
+
+.info-box {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+}
+
+    .info-box h3 {
+        margin-top: 0;
+        color: #495057;
+        font-size: 14px;
+    }
+
+    .info-box ul {
+        padding-left: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .info-box li {
+        margin-bottom: 5px;
+    }
+
+/* Стили для разных ролей */
+.role-admin {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.role-author {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.role-reader {
+    color: #6c757d;
+    font-weight: bold;
+}

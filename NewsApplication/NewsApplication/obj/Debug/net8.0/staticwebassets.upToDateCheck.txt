@@ -1,2 +1,6 @@
-wwwroot\login.html
+wwwroot\css\login.css
+wwwroot\css\styles.css
 wwwroot\index.html
+wwwroot\js\app.js
+wwwroot\js\login.js
+wwwroot\login.html
